@@ -161,3 +161,4 @@ cython_debug/
 #.idea/
 
 .setup_db.py
+.idea
