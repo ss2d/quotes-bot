@@ -4,15 +4,15 @@ import logging
 from aiogram import Bot, Dispatcher
 
 
-import config as cfg
+import config
 import handlers
 
 logging.basicConfig(level=logging.INFO)
 
 
 async def main():
-    bot = Bot(token=cfg.Telegram.token)
-    cfg.Telegram.bot = bot
+    bot = Bot(token=config.Telegram.token)
+    config.Telegram.bot = bot
     dp = Dispatcher()
 
     dp.include_router(handlers.router)
